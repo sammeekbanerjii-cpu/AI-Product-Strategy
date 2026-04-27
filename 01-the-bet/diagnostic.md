@@ -1,16 +1,16 @@
 # Three-Axis Vulnerability Diagnostic
 
 ## Product
-<!-- Name the product you're diagnosing. Real product at your company — not a hypothetical. -->
+<Offer Service is Salesforce's internal digital marketing platform for managing, publishing, and orchestrating marketing offers across Salesforce's web properties.>
 
-**Product:**
-**Your Role:**
+**Product:** Offer Service
+**Your Role:** Senior Manager - Product Management
 
 ---
 
 ## Scores
 
-### Contextual Moat — __/5
+### Contextual Moat — _2_/5
 *Workflow depth × switching cost. Would users leave in a weekend if a competitor showed up?*
 
 **Score rationale:**
@@ -19,7 +19,7 @@
 
 ---
 
-### Data Advantage — __/5
+### Data Advantage — _3_/5
 *Proprietary signal that compounds with usage. What do you see that OpenAI doesn't?*
 
 **Score rationale:**
@@ -28,7 +28,7 @@
 
 ---
 
-### Platform Exposure — __/5
+### Platform Exposure — _2_/5
 *Encroachment risk × pivot speed. If Apple/Google/OpenAI ships your hero feature native — then what?*
 
 **Score rationale:**
