@@ -64,7 +64,7 @@ What Data Offer Service Actually Generate:
 **Score rationale:**
 
 **Named attacker (from partner challenge):**
-
+-> HubSpot
 ---
 
 ## Killer Memo
