@@ -38,8 +38,7 @@
 
  Probably not in a weekend — OGS's data flow integrations and the Offer Catalog's embedded configuration create real friction. But in a quarter? That's a real risk if:
  -> The Offer Catalog hasn't achieved true "write-once, reuse everywhere" adoption across all Salesforce properties
- -> Downstream Data Cloud dependencies aren't deeply documented and relied upon
- -> No unique data asset (like accumulated progressive profiling data or offer performance history) is locked inside the platform
+ -> Downstream Data Cloud integrations is still pending
 
 **Named attacker (from partner challenge):**
 
