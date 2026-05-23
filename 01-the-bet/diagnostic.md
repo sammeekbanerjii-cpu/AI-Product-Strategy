@@ -105,17 +105,22 @@ Named attacker:(External)
 ## Killer Memo
 
 > You run AI at **[OpenAI / Google / Apple]**. Your OKR: make this product irrelevant.
->
+
 > **3-sentence memo:**
->
-> 1. Attack:
-> 2. Wedge:
-> 3. Why users switch:
+
+> 1. Attack: Salesforce is investing engineering resources maintaining a custom internal platform for offer management that any enterprise team can now replicate in weeks using our API on top of their existing Data Cloud investment.
+> 2. Wedge: Pitch directly to Salesforce's CMO — AI-native offer generation, progressive profiling, and real-time optimization as a turnkey capability, bypassing the internal product roadmap entirely.
+> 3. Why users switch: Marketing teams get AI-generated offer variants and faster publishing cycles on demand, while leadership retires internal platform maintenance costs and redirects the team to higher-leverage work.
 
 ---
 
 ## Top Vulnerability
 <!-- One line: what's the single biggest strategic risk? -->
 
+-> The data advantage is latent, not active — if Offer Service doesn't close the loop between OGS behavioral signals and intelligent offer decisioning before Agentforce matures, it risks being absorbed into the AI platform layer rather than expanded as a standalone product.
+
 ## Confidence Level
 <!-- H / M / L — how confident are you in this bet after the diagnostic? -->
+
+Confidence Level: M
+-> The moat is real but still maturing. The transition from project-based delivery to product motion introduces execution risk, and the FY27 Analytics and Experimentation themes are the right strategic bets — but confidence moves to H only when those themes ship and the compounding data loop is closed.
