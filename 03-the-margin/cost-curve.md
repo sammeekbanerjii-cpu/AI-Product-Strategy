@@ -1,4 +1,4 @@
-## Packing Decision
+## Packaging Decision
 
 **Leader:**
  ->  AI Offer Draft Generation + Conversion Scoring
