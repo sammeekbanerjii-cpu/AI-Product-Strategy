@@ -73,10 +73,10 @@
 **Why users will trust a probabilistic system.**
 
 - **Reliability Target:** 92% — weekly pass rate against full golden dataset. Defensible, measurable, shippable.
-- **Golden Dataset:**
-- **Confidence UX:** Offer Intelligence surfaces confidence explicitly at every tier — marketers see the score, the signal strength, and the source count before they publish. Uncertainty is never hidden.…
+- **Golden Dataset:** 12 cases · 6 adversarial · target v1: 150 cases. All expected outputs are binary testable boolean conditions — no narrative descriptions, every condition is pass/fail. Judge: Claude Sonnet as evaluator · rubric: brand tone (1–5) · factual accuracy (pass/fail) · segment-offer fit (1–5) · uncertainty signal correctness (pass/fail). Calibration: judge runs against all golden rows weekly — if judge disagrees with labeled answer on >5% of rows, judge is recalibrated before live traffic. Every model or prompt change runs the full dataset before merge.
+- **Confidence UX:** Offer Intelligence surfaces confidence explicitly at every tier — marketers see the score, the signal strength, and the source count before they publish. Uncertainty is never hidden. Three tiers: >90% point-estimate score, publish active, reasoning panel collapsed · 50–90% score as range, review recommended, reasoning expanded · <50% score null, publish blocked, human review queue triggered.
 - **HITL Architecture:** **Trigger:** Confidence <70% OR safety flag (brand violation / factual accuracy failure / insufficient signal) → human review queue. PLG provisioning error → immediate human queue regardless of confidence score.
-- **Failure Mode Coverage:**
+- **Failure Mode Coverage:** Six adversarial cases — thin signal (score null, human review triggered) · brand compliance failure (prohibited terms flagged, publish blocked) · true duplicate detection (warning before generation) · A/B variant false positive (duplicate block bypassed on marketer flag) · PLG provisioning failure (error state within 5s, no partial offer written) · factually incorrect output (deprecated feature caught, correct replacement surfaced).
 
 → Details: [`04-the-contract/`](04-the-contract/)
 
