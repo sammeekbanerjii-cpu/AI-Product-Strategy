@@ -11,7 +11,9 @@
 | Initiative | Metric | Confidence |
 |-----------|--------|-----------|
 |Correction capture pipeline — instrument field-level delta logging between AI output and final published offer, tagged by segment, offer type, and product line, routed into model layer | Correction signal flowing into model layer by end of sprint 2 · HITL% baseline established | M |
-|Kill switch abstraction wrapper — decouple direct OpenAI API calls behind a provider abstraction layer | Provider swap time reduced from 3–6 weeks to 48-hour target | H | |New product line low-confidence UX — generate drafts labelled as thin-signal starting points, human review mandatory, correction signal captured from day one | 100% of new product line offers trigger human review flag · zero thin-signal offers published without review | H | |Golden dataset expanded to 50 cases — PM-led, no engineering dependency, priority on new adversarial patterns identified in shadow audit | Weekly pass rate measurable against defensible baseline · judge calibration stable | H |
+|Kill switch abstraction wrapper — decouple direct OpenAI API calls behind a provider abstraction layer | Provider swap time reduced from 3–6 weeks to 48-hour target | H | 
+|New product line low-confidence UX — generate drafts labelled as thin-signal starting points, human review mandatory, correction signal captured from day one | 100% of new product line offers trigger human review flag · zero thin-signal offers published without review | H | 
+|Golden dataset expanded to 50 cases — PM-led, no engineering dependency, priority on new adversarial patterns identified in shadow audit | Weekly pass rate measurable against defensible baseline · judge calibration stable | H |
 
 ### Horizon 2 — Next (3-9 months)
 *Bets. Requires new capabilities or integrations.*
@@ -19,7 +21,9 @@
 | Initiative | Metric | Confidence |
 |-----------|--------|-----------|
 | Analytics dashboard — native OGS conversion visibility replacing manual Excel tracker workflows| $8K/month Excel overhead eliminated · offer conversion data accessible without OGS bulk export | M |
-| Approval workflow — native approval routing replacing Slack and email chains, with full audit trail | % of offers published via native approval path vs. Slack chains · unapproved publish incidents = 0 | H | | Grammarly partner integration — inline copy refinement surfaced after AI draft generation, accepted changes logged as correction signal| Override rate on headline and CTA fields declining MoM · integration live within 1 sprint of enterprise agreement confirmation | H | | HITL% trajectory confirmed declining QoQ — first proof point that H1 correction capture is compounding| HITL% at or below 35% by end of H2 · if rising, retraining decision documented within 5 business days | M |
+| Approval workflow — native approval routing replacing Slack and email chains, with full audit trail | % of offers published via native approval path vs. Slack chains · unapproved publish incidents = 0 | H | 
+| Grammarly partner integration — inline copy refinement surfaced after AI draft generation, accepted changes logged as correction signal| Override rate on headline and CTA fields declining MoM · integration live within 1 sprint of enterprise agreement confirmation | H | 
+| HITL% trajectory confirmed declining QoQ — first proof point that H1 correction capture is compounding| HITL% at or below 35% by end of H2 · if rising, retraining decision documented within 5 business days | M |
 
 ### Horizon 3 — Bet (9-18 months)
 *Moonshots. High uncertainty, high potential.*
