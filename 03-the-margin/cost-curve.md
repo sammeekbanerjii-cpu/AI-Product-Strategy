@@ -18,6 +18,33 @@ Heavy inference, multi-step orchestration, power-user territory. Complex agentic
 **Bundler or Add-On:**
 -> Add-on. Gate behind a premium tier for high-frequency campaign teams. Protects core platform margin while capturing value from the segment that needs autonomous orchestration.
 
+-----
+
+## Cost Model + Stress Tests sections
+
+# Margin Calculator — Module 3
+
+## Inputs
+- Avg requests/user/month: 150
+- Blended cost/request: $0.00096
+- Revenue/user/month: $133
+- Non-AI COGS/user/month: $15
+
+## Current Margin
+- AI COGS/user: $0.14
+- Total COGS/user: $15.14
+- Gross margin: 88.6% ($117.86/user)
+
+## Stress Test
+| Scenario | AI COGS | Margin |
+|----------|---------|--------|
+| 3x Cost  | $0.43 | 88.4% ($117.57) |
+| 2x Usage | $0.29 | 88.5% ($117.71) |
+
+-----
+
+
+
 # Cost Curve & Pricing Strategy
 
 ## Cost Model
