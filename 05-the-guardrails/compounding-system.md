@@ -2,8 +2,6 @@
 
 ## Feedback Loops
 
-## Feedback Loops
-
 | Loop | Input | Output | Compounds? | Status |
 |------|-------|--------|-----------|--------|
 | Recursive Learning | Marketer corrections to AI-generated offer drafts — delta between AI output and human-approved copy, tagged by segment, offer type, and product line at publish | Improved offer draft quality for the same and similar contexts on every subsequent generation | Y | missing |
@@ -45,30 +43,92 @@ SMB trial offer learnings do not inform SMB webinar recommendations. Gated conte
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-| Loop | Input | Output | Compounds? | Status |
-|------|-------|--------|-----------|--------|
-| | | | Y/N | active / broken / missing |
-| | | | Y/N | active / broken / missing |
-| | | | Y/N | active / broken / missing |
-
-**Broken loop identified by partner:**
-**Fix plan:**
-
 ## Context Connectivity
 <!-- How does knowledge flow across teams and domains? Where does it silo? -->
 
+## Governance Policy and Agent Topology
+
+<!-- Governance Policy — Offers Service -->
+
 ## Governance Policy
+
+**Scope:** All AI-generated outputs from Offer Intelligence — offer draft generation, conversion score predictions, form field recommendations, progressive profiling logic, disclosure summaries, and CTA suggestions. Applies to all Salesforce marketing teams authoring and publishing offers across Salesforce web properties. Excludes: Offers authored entirely manually without AI assistance. External AI tools used outside the Offer Intelligence platform (covered under Shadow AI policy). Offer Service infrastructure not involving AI-generated outputs (OGS routing, Data Cloud sync).
+
+**Autonomy boundaries:** Form field validation · disclosure summaries · CTA suggestions on standard templates · conversion scoring ≥90% confidence with no safety flags · progressive profiling field suppression for returning visitors — auto. Any draft with confidence <70% · new product lines launched within 90 days · offers containing pricing claims or legal terms · enterprise segment offers · PLG trial provisioning confirmation · any safety flag triggered (brand violation, factual inaccuracy, prohibited terms) — human approval required. Publishing offers to enterprise accounts (>$100K ACV targeting threshold) Generating or modifying pricing, discount, or legal terms in any offer Activating autonomous offer sequencing for any new audience segment Any offer containing regulatory disclosures (financial, healthcare, data privacy) Reactivating AI-assisted publish after a hallucination breach suspension — never auto.
+
+**Escalation triggers:** 1. Confidence score <70% at publish time 2. Brand compliance flag: prohibited terms, competitive claims, unsubstantiated performance statements 3. Deprecated feature reference: output references product feature not in current registry 4. PLG provisioning service returns error or timeout 5. New product line with <10 historical offer analogues 6. Marketer override rate exceeds 40% on a single offer type in a rolling 30-day window 7. Weekly golden dataset pass rate drops below 88% 8. Hallucination rate exceeds 2% of published offers in rolling 7-day window
+
+**Audit cadence:** Real-time — timeLatency · PLG provisioning status · hallucination detection · brand compliance flags (Engineering lead, Offer Service). Weekly — Golden dataset pass rate · HITL% · override rate by offer type · judge score trend (Offer Catalog PM). Monthly — Conversion score accuracy vs. OGS actuals · shadow AI signal review · HITL% trajectory (Senior Manager, PM — Offer Catalog). Quarterly — Full governance review · model card update · bias posture · regulatory exposure · Kill Switch 48-hour swap test (Senior Manager, PM — Offer Catalog + Engineering lead).
+
+**Regulatory exposure (EU AI Act / other):** GDPR / CCPA · EU AI Act · Salesforce Einstein Trust Layer (internal). Risk tier: limited. Controls: 1. EU AI Act (transparency) - Confidence scores and source citations surfaced in UI at all tiers · AI-generated drafts labelled explicitly before marketer review
+
+2. GDPR / CCPA (data residency) - GDPR / CCPA (data residency)
+
+3. GDPR / CCPA (data retention) - Offer interaction data retained for 24 months in Data Cloud · progressive profile data deleted upon user request within 30 days
+
+4. Einstein Trust Layer (zero retention) - All model calls routed through internal abstraction layer · no customer data passed to external providers for training · audit logs maintained for all AI-assisted publish events.
+
+## Agent Topology
+
+- Offer Draft Generator (current — Copilot)
+Can do: generate offer copy · predict conversion scores · suggest form fields · surface confidence signals.
+Can't do: publish without marketer approval · access raw customer PII · modify published offers · generate pricing or legal terms.
+Approval owner: Marketer — required for all drafts before publish.
+Kill switch: Offer Catalog PM can disable AI draft generation platform-wide via feature flag. Resolution: Engineering lead restores after golden dataset validation.
+
+- Conversion Scorer (current — automated)
+Can do: score offers against OGS historical signal · surface confidence range and source count.
+Can't do: override marketer judgment · suppress uncertainty signals · assign scores to insufficient-signal offers.
+Approval owner: Automated above 70% confidence — no human required.
+Kill switch: Engineering lead disables scoring service via config. Fallback: all offers route to human review queue.
+
+- Offer Sequencer (future — FY27 Killer SKU)
+Can do: sequence offer types based on visitor behaviour · personalise CTA from progressive profile.
+Can't do: publish to enterprise accounts without human gate · modify pricing or legal terms · activate for new segment without sign-off · operate without active Recursive Learning and Cross-Domain Transfer loops.
+Approval owner: Senior Marketing Manager sign-off required per new segment · PM approval for enterprise account targeting.
+Kill switch: Senior Manager, PM can suspend autonomous sequencing platform-wide immediately via feature flag. Fallback: all sequencing decisions route to human review queue. Kill switch owner: Senior Manager, PM — Offer Catalog.
+
+- Governance principle: Autonomy boundaries expand only after Recursive Learning and Cross-Domain Transfer loops are declared Active by the Offer Catalog PM based on measurable activation criteria (defined in compounding-system.md). Gates lift on performance evidence — not roadmap schedule. VP Product Management approves any expansion of 🔴 Never auto boundaries.
+
+-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Scope:**
 **Autonomy boundaries:**
