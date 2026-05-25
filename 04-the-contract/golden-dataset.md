@@ -24,6 +24,35 @@ Dataset health
 
 -----
 
+## Confidence UX Design
+
+**Approach:** Offer Intelligence surfaces confidence explicitly at every tier — marketers see the score, the signal strength, and the source count before they publish. Uncertainty is never hidden. Below 50%, the system escalates to human review automatically, and every correction made at any tier feeds back into the model as labeled training data.
+
+**Confident (>90%):** Point-estimate score with source count displayed ("Score: 87 · based on 14 similar SMB trial offers"). Reasoning panel available but collapsed. Publish button active with no friction. AI is allowed to present the draft as a recommendation.
+
+**Uncertain (50-90%):** Score displayed as a range, not a point estimate ("Score: 68–76 · based on 4 analogues — limited signal"). Reasoning panel expanded by default. "Review recommended" badge on the draft. Editable fields highlighted. Publish requires one-click confirmation acknowledging the uncertainty. AI must qualify its output — no presenting drafts as confident recommendations.
+
+**Not confident (<50%):** Score field is null — no estimate shown. Draft labelled explicitly: "AI draft — human review required before publish." Publish blocked. Human review queue triggered automatically. Closest analogous segment cited so the marketer understands why signal is insufficient. AI is not permitted to present this as a recommendation.
+
+**User control surface:** 
+
+✅ Users adjust confidence threshold — power users can raise their auto-publish floor; new users default to conservative settings.
+✅ Users see AI reasoning — source offers, segment match quality, and signal strength visible at all tiers.
+✅ Users correct and override — one-click correction available at every confidence level.
+✅ Corrections feed back into the model — every marketer edit logged as labeled training signal, closing the correction loop (currently 1/5 in the data flywheel scoring).
+- Specifics: HITL% declining quarter-over-quarter is the operational proof that corrections are compounding. This is the primary metric demonstrating the AI is learning from human interventions, not just processing them.You said: /compact/compactWorking on it...AskSonnet 4.6Queue
+
+-----
+
+
+
+
+
+
+
+
+
+
 **Adversarial rows included:** __
 **Coverage gaps identified by partner:**
 
