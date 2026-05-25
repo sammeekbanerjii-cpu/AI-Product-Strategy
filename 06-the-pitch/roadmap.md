@@ -30,30 +30,35 @@
 
 | Initiative | Metric | Confidence |
 |-----------|--------|-----------|
-| | | H / M / L |
+|Cross-Domain Transfer loop activated — high-converting patterns in one offer category surface as recommendations in adjacent categories | Pattern learned in Offer Type A improves conversion score accuracy in Offer Type B by ≥3 points on golden dataset | L |
+|A/B Experimentation theme — native variant testing replacing Optimizely and external tools, conversion signal returned to the recommendation layer|$3–5K/month external tool spend eliminated · variant conversion signal feeding recommendation layer, not siloed externally | M |
+|Autonomous Offer Sequencer — sequences offer types based on visitor behaviour, personalises CTA from progressive profile, enterprise gate active | HITL% for sequenced offers ≤20% · zero enterprise account publishes without human gate · Recursive Learning and Cross-Domain Transfer loops declared Active before sequencer goes live | L |
 
 ## Board Pitch
 
 **Thesis (1 sentence):**
+- Offer Intelligence turns 18 months of Salesforce's proprietary B2B offer performance signal into a compounding data moat — closing the loop between OGS behavioral data and intelligent offer decisioning before Agentforce makes the question irrelevant.
 
 **The case:**
-1. Why now:
-2. What's defensible:
-3. The economics:
+1. Why now: Mutiny ships a native Data Cloud connector in 6–9 months — if correction capture is not live before that, Mutiny starts the compounding loop on Salesforce's own proprietary signal. Agentforce absorbs offer orchestration in 12–18 months if Offer Intelligence doesn't establish workflow depth first. The window to start compounding before a competitor does closes this quarter — not next roadmap cycle.
+2. What's defensible: The workflow moat is real today — PLG provisioning is synchronous and acquisition-critical, OGS is the write path for web activity into Data Cloud, and the Offer Catalog's centralized configuration creates switching friction measured in quarters. The data moat is the FY27 bet: 18 months of first-party B2B intent signal no external vendor can replicate, plus a correction loop that compounds quality with every published offer. Mutiny can replicate the Data Cloud connector. It cannot replicate the signal history plus a correction loop that has been running since launch.
+3. The economics: 950x inference ROI ($133 revenue per user vs. $0.14 AI COGS). Gross profit grows 67% under hybrid pricing. AI COGS are fully covered at 1 published offer per user per month. A 3× provider price spike moves gross margin by 0.2 points. The unit economics are structurally immune to cost volatility at this ratio.
 
 **The risks:**
-1. Trust / failure modes:
-2. Scale / governance:
-3. Competitive:
+1. Trust / failure modes: The core conversion lift hypothesis — that AI-generated offers outperform manually authored offers — has not been validated by a controlled test. One controlled A/B test closes this gap in H1. The golden dataset has 12 cases at launch; 50 is the H1 target. Both are gaps today and both are closable before the board reconvenes.
+2. Scale / governance: Correction capture does not exist. Zero of three compounding loops are active. The freeze test currently passes — the product does not get smarter when frozen. HITL% declining QoQ is the proof the loops are working; that trajectory has not yet been established. The Data Cloud bridge requires joint ownership between two engineering teams with no committed workstream today.
+3. Competitive: Agentforce ships native offer orchestration with Data Cloud integration before Offer Intelligence closes the data loop. This is the kill criterion that cannot be defended by engineering alone — it requires an explicit organizational decision that Offer Intelligence is the AI layer for offer decisioning, not a capability to be absorbed by the platform team. That decision needs to be made in this room.
 
 **The ask:**
+- Three FY27 roadmap commitments with named owners and hard timelines: (1) Correction capture pipeline — 2 sprints from today, owned by Offer Catalog PM and Offer Service Engineering lead, correction validation gate included as prerequisite; (2) Data Cloud bridge — joint workstream between Offer Service Engineering and Data Cloud integration team scoped and owned before Q2, neither team can build this unilaterally; (3) Kill switch abstraction wrapper — this week, eval harness this month, multi-model routing this quarter.
 
 ## M1 Baseline vs. Now
 *Your 3-sentence AI strategy from Module 1 vs. what you'd say now:*
 
-**M1 baseline:**
+**M1 baseline:**: Offer Service is an internal marketing platform with AI potential. The product bet is to surface historical offer performance data at the point of authoring so marketing managers can publish better-converting offers faster — closing a data loop that currently sits dormant in Data Cloud.
 
-**Now:**
+**Now:**: Offer Intelligence is a compounding intelligence engine — Workflow moat today, Data moat FY27, 950x inference ROI, 67% gross profit growth. Vulnerability scores unchanged (Contextual Moat 2/5 · Data Advantage 3/5 · Platform Exposure 2/5) — what changed is the plan to move them. Specific, sequenced, owned, with kill criteria that force an honest decision if the bet isn't working. The strategy is a bet on sequencing, not potential.
+
 
 **AI Evaluation section:**
 
