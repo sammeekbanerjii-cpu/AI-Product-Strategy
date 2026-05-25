@@ -45,39 +45,24 @@ Specifics: HITL% declining quarter-over-quarter is the operational proof that co
 
 -----
 
-
-
-
-
-
-
-
-
-
-**Adversarial rows included:** __
-**Coverage gaps identified by partner:**
-
-## Confidence UX Design
-
-**Approach:** show uncertainty / tiered confidence / human-in-loop trigger
-
-**High confidence (>90%):**
-**Medium confidence (70-90%):**
-**Low confidence (<70%):**
-
-**User control surface:**
+## Reliability Contract and HITL Architecture
 
 ## Reliability Contract
 
 | Metric | Target | Measurement | Alert Threshold |
 |--------|--------|-------------|-----------------|
-| Accuracy | | | |
-| Hallucination rate | | | |
-| Latency (p95) | | | |
-| Drift velocity | | | |
+| Accuracy | 92% — weekly pass rate against full golden dataset. Defensible, measurable, shippable. | Weekly · full golden dataset (12 rows at launch, growing to 150) · Claude Sonnet as judge · brand tone + factual accuracy + segment-offer fit rubric | <88% → pages on-call PM → page on-call |
+| Hallucination rate | <1% — published offers containing fabricated product claims or deprecated feature references | Same weekly judge run · factual accuracy rubric cross-referenced against current Salesforce product feature registry | >2% → immediate action. Air Canada precedent — Offer Intelligence outputs carry Salesforce brand authority. Bot speaks for the brand, brand pays for the lie. → route to human review queue |
+| Latency (p95) | TTFT ≤1.5s (time-to-first-token) · Full draft completion ≤6s · PLG provisioning ≤2s (separate target — provisioning failure is a revenue event) | Continuous prod monitoring (Datadog) · PagerDuty integration · PLG provisioning on separate integration monitor | TTFT >2.5s for 5 min → PagerDuty · Full draft >9s for 5 min → PagerDuty · PLG provisioning >3s → immediate eng escalation → page on-call |
+| Drift velocity | <0.5% quality decay per 4-week rolling window | 4-week rolling average pass rate trend · automated weekly comparison against prior period baseline (Datadog) | >1% decay per 4-week window → investigate. World changed, not the model — audit before rollback. → trigger gold-set audit |
 
 ## HITL Architecture
-<!-- When does a human step in? What's the escalation path? -->
 
-## Red-Team Findings
-*What failure mode did your partner find that you missed?*
+**Trigger:** Confidence <70% OR safety flag (brand violation / factual accuracy failure / insufficient signal) → human review queue. PLG provisioning error → immediate human queue regardless of confidence score.
+
+**Reviewer:** Senior Marketing Manager, Offer Catalog team (primary). PM as escalation path only when a systemic issue is identified — not for routine review. Dedicated reviewer assigned during high-volume campaign periods.
+
+**Feedback loop:** Yes — every correction captured as labeled delta (AI output vs. approved output), tagged with segment + offer type + product line, fed into weekly gold-set audit. HITL% declining quarter-over-quarter is the primary proof corrections are compounding into model improvement, not just being processed and discarded.
+
+-----
+
