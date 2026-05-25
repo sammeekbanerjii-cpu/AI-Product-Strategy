@@ -53,16 +53,16 @@
 
 ## The Margin (M3)
 
-**Will this make money or bleed it?**
+**Will this make money or bleed it?** Yes
 
-- **Gross Margin (current):**
-- **Gross Margin (AI-adjusted):**
-- **Pricing Model:**
-- **Pricing Today → Tomorrow:**
-- **Total AI COGS / unit:**
+- **Gross Margin (current):** ~50–55% — no cascade architecture, frontier model on all requests, fixed infrastructure cost regardless of usage volume.
+- **Gross Margin (AI-adjusted):** ~65–70% post-cascade routing · ~72–75% with semantic caching added · ~75–80% at full optimization. Cascade routing alone recovers 10–15 margin points by routing 80% of requests to small/mid-tier models. Target: return to SaaS-equivalent margins (80%+) through architecture, not price increases.
+- **Pricing Model:** Hybrid — $50/seat/month base + $25 per AI-assisted offer published. Aligns revenue to the value event — a published offer — rather than seat access. NRR scales with offer volume, not headcount. $25 captures 10–15% of labor savings per offer ($150–250 saved) — well below giveaway territory.
+- **Pricing Today → Tomorrow:** Today: $75/seat/month flat SaaS. Revenue capped at seat count, no upside from usage growth. Tomorrow: $50/seat base + $25/AI-assisted offer published. At 10 offers/user/month → $300 revenue/user vs. $75 today. Gross profit grows +$1,800/month (+67%) while COGS shifts from ~$30/user fixed to $15.14/user variable.
+- **Total AI COGS / unit:**  $0.00096/request blended · ~$0.14/user/month at 150 requests per active marketer. Inference ROI: $133 revenue per user ÷ $0.14 AI COGS = 950x. A 3× provider price spike raises COGS from $0.14 to $0.42/user/month — gross margin moves by 0.2 points. Provider cost volatility is not a material risk at this ROI ratio.
 - **Cascading Strategy:** Triage: -> GPT-4o-mini / Claude Haiku — handles all simple classification, field validation, disclosure rendering, and template population. Fast, cheap, high-volume.; frontier: -> GPT-4.1 — reserved exclusively for enterprise offer draft generation and complex personalization where output quality directly impacts conversion rates.; ratio -> 80% small/mid · 20% frontier
-- **Net Margin Shift:** - Δ margin %: −4%
-- **Break-even at:**
+- **Net Margin Shift:** The right headline is +67% gross profit, not −4% margin. Δ margin % −4% is the intentional cost of switching from a seat-count ceiling to an outcome model with no natural revenue cap. Gross profit grows from $2,700/month to $4,500/month at 60 users. Margin percentage compresses slightly because the hybrid model carries variable COGS per outcome — that is the correct trade.
+- **Break-even at:** AI COGS fully covered at 1 AI-assisted offer published per user per month ($25 outcome fee vs. $0.14 blended AI COGS). Revenue parity with the prior $75/seat model reached at 1 published offer/month ($50 base + $25 = $75). Every offer published beyond the first is incremental gross profit at near-zero marginal cost — the margin compounds with usage, not headcount.
 
 → Details: [`03-the-margin/`](03-the-margin/)
 
