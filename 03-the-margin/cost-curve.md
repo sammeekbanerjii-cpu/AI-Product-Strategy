@@ -43,11 +43,37 @@ Heavy inference, multi-step orchestration, power-user territory. Complex agentic
 
 -----
 
-
-
 # Cost Curve & Pricing Strategy
 
 ## Cost Model
+-> Feature - Form Field Validation + Disclosure Summaries
+-> Complexity - Simple
+-> Model Tier - Small (GPT-4o-mini / Haiku)
+-> Cost/Req - $0.0001
+-> Volume % - 40%
+-> Weighted - $0.00004
+
+-> Feature - Conversion Scoring + Segment Recommendations
+-> Complexity - Medium
+-> Model Tier - Mid (GPT-4o / Claude Sonnet)
+-> Cost/Req - $0.0008
+-> Volume % - 40%
+-> Weighted - $0.00032
+
+-> Feature - Offer Draft Generation (Enterprise)
+-> Complexity - Complex
+-> Model Tier - Frontier (GPT-4.1)
+-> Cost/Req - $0.003
+-> Volume % - 20%
+-> Weighted - $0.00060
+
+ **Blended Cost Per Request Across All Features**
+ ->  $0.00096 per request
+
+-----
+
+
+
 
 | Cost Category | Per-User/Month | Notes |
 |--------------|----------------|-------|
