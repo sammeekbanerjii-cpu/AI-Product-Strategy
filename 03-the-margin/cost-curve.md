@@ -67,8 +67,8 @@ Heavy inference, multi-step orchestration, power-user territory. Complex agentic
 -> Volume % - 20%
 -> Weighted - $0.00060
 
- **Blended Cost Per Request Across All Features**
- ->  $0.00096 per request
+ **Blended COGS**
+ ->  Blended COGS per user per month (est. 150 requests/active marketer): ~$0.14/user/month
 
 -----
 
