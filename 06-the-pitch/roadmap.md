@@ -10,8 +10,8 @@
 
 | Initiative | Metric | Confidence |
 |-----------|--------|-----------|
-|Correction capture pipeline — instrument field-level delta logging between AI output and final published offer, tagged by segment, offer type, and product line, routed into model layer | Correction signal flowing into model layer by end of sprint 2 · HITL% baseline established | H / M / L |
-| | | M  |
+|Correction capture pipeline — instrument field-level delta logging between AI output and final published offer, tagged by segment, offer type, and product line, routed into model layer | Correction signal flowing into model layer by end of sprint 2 · HITL% baseline established | M |
+|Kill switch abstraction wrapper — decouple direct OpenAI API calls behind a provider abstraction layer | Provider swap time reduced from 3–6 weeks to 48-hour target | H | | | | M |
 
 ### Horizon 2 — Next (3-9 months)
 *Bets. Requires new capabilities or integrations.*
