@@ -1,4 +1,4 @@
-## Packaging Decision
+## Packaging Decision Block
 
 **Leader:**
  ->  AI Offer Draft Generation + Conversion Scoring
@@ -92,44 +92,43 @@ Heavy inference, multi-step orchestration, power-user territory. Complex agentic
 
 -----
 
-
-
-
-
-| Cost Category | Per-User/Month | Notes |
-|--------------|----------------|-------|
-| Inference (primary model) | | |
-| Inference (cascading/triage) | | |
-| Infrastructure | | |
-| Data/storage | | |
-| Human-in-the-loop | | |
-| **Total AI COGS** | | |
-
-## Cascading Strategy
-<!-- Cheap model → frontier model routing logic -->
-
-**Triage model:**
-**Frontier model:**
-**Routing rule:**
-**Expected cascade ratio:**
-
 ## Pricing Model
 
-**Current pricing:**
-**Proposed AI pricing:**
-**Model:** seat-based / usage-based / outcome-based / hybrid
+Pricing Strategy Block
 
-## Stress Tests
+Pricing Strategy
+- Strategy posture: Penetrate
+- Pricing model: Hybrid (base + usage)
+- Unit of work metered: AI-assisted offer published — a conversion-optimized offer brief generated, reviewed, and published to a Salesforce web property
+- Base fee ($/month): 50
+- Price per unit: $25
+- Estimated units/user/month: 10
+- Implied revenue/user/month: $300.00
+- COGS/user/month: $15.14
+- Gross margin: ~95%
 
-| Scenario | Impact on Margin | Response |
-|----------|-----------------|----------|
-| Inference costs 3x | | |
-| Heaviest segment doubles | | |
-| Model provider raises prices 50% | | |
+Decision Note
+Why this pricing structure fits the buyer and the value delivered: — The pricing structure is designed to win adoption now and capture value later — with the outcome layer as the mechanism that ties platform investment directly to marketing output.
+
+-----
 
 ## Board One-Pager
 <!-- Before/After: Old SaaS revenue vs. AI usage revenue for your product -->
 
 **Before (traditional SaaS):**
+- Revenue: $75/seat/month × 60 seats = $4,500/month
+- COGS: $1,800/month (fixed)
+- Gross Margin: 60%
+
 **After (AI-enabled):**
+- Revenue: $50/seat base + $25/offer × 200 offers/month = $8,000/month
+- COGS: $3,500/month (variable)
+- Gross Margin: 56%
+- 
 **Net margin shift:**
+- Δ margin %: −4%
+- Δ gross $: +$1,800/month (+67%)
+- Narrative: Margin % compresses by 4 points as fixed infrastructure COGS gives way to variable inference costs — expected and manageable through the 80/20 cascade architecture already in the roadmap. Gross profit grows 67% because outcome pricing unlocks budget that seat access never could. NRR scales automatically as offer volume grows — 200 offers/month at launch becomes 400 as adoption deepens, doubling outcome revenue without adding seats. The platform earns more as it proves more.
+- One line for the board: We gave up 4 margin points and gained 67% more gross profit — because we stopped charging for access and started charging for work done.
+
+-----
