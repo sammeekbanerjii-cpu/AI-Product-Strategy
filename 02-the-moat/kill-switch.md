@@ -24,6 +24,7 @@ THREE ACTIONS
 -> This month: Build the eval harness — define minimum quality criteria for offer copy and conversion score accuracy against OGS data. Validate a second provider (Anthropic or Azure OpenAI) against that bar so a swap decision can be made with confidence, not guesswork.
 -> This quarter: Implement multi-model routing with at least one live fallback provider — tasks routed by cost, latency, and quality requirements. At this point, a provider shock becomes a configuration change, not an engineering emergency.
 
+-----
 
 ## Portability Score
 -> Locked
