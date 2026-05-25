@@ -40,7 +40,8 @@ Dataset health
 ✅ Users see AI reasoning — source offers, segment match quality, and signal strength visible at all tiers.
 ✅ Users correct and override — one-click correction available at every confidence level.
 ✅ Corrections feed back into the model — every marketer edit logged as labeled training signal, closing the correction loop (currently 1/5 in the data flywheel scoring).
-- Specifics: HITL% declining quarter-over-quarter is the operational proof that corrections are compounding. This is the primary metric demonstrating the AI is learning from human interventions, not just processing them.
+
+Specifics: HITL% declining quarter-over-quarter is the operational proof that corrections are compounding. This is the primary metric demonstrating the AI is learning from human interventions, not just processing them.
 
 -----
 
