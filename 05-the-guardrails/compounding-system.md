@@ -30,22 +30,6 @@ SMB trial offer learnings do not inform SMB webinar recommendations. Gated conte
 
 -----
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Context Connectivity
-<!-- How does knowledge flow across teams and domains? Where does it silo? -->
-
 ## Governance Policy and Agent Topology
 
 <!-- Governance Policy — Offers Service -->
@@ -88,65 +72,61 @@ Can't do: publish to enterprise accounts without human gate · modify pricing or
 Approval owner: Senior Marketing Manager sign-off required per new segment · PM approval for enterprise account targeting.
 Kill switch: Senior Manager, PM can suspend autonomous sequencing platform-wide immediately via feature flag. Fallback: all sequencing decisions route to human review queue. Kill switch owner: Senior Manager, PM — Offer Catalog.
 
-- Governance principle: Autonomy boundaries expand only after Recursive Learning and Cross-Domain Transfer loops are declared Active by the Offer Catalog PM based on measurable activation criteria (defined in compounding-system.md). Gates lift on performance evidence — not roadmap schedule. VP Product Management approves any expansion of 🔴 Never auto boundaries.
+- Governance principle: Autonomy boundaries expand only after Recursive Learning and Cross-Domain Transfer loops are declared Active by the Offer Catalog PM based on measurable activation criteria (defined in compounding-system.md). Gates lift on performance evidence — not roadmap schedule. 
 
 -----
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Scope:**
-**Autonomy boundaries:**
-**Escalation triggers:**
-**Audit cadence:**
-**Regulatory exposure (EU AI Act / other):**
-
-## Agent Topology
-<!-- If using agents: what can each agent do? What can't it do? Who approves what? -->
-
 ## Shadow AI Audit
 
-| Tool | Owner | Risk Level | Decision |
-|------|-------|-----------|----------|
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
-| | | H / M / L | keep / govern / kill |
+Shadow AI Audit (user-side) — Module 5
 
-**Total tools found:**
-**Tools after triage:**
-**Estimated hidden spend:**
+## Discover — User-Side Workarounds
+- Marketers paste new product line briefs into ChatGPT to draft offer copy, then enter output manually into the Offer Catalog | source: Support ticket | signal: Capability gap | freq: H | spend: $2000/mo | decision: Build
+- Campaign teams build Excel trackers from OGS exports to monitor offer conversion rates | source: API pattern | signal: Capability gap | freq: H | spend: $8000/mo | decision: Build
+- Slack and email chains used for offer approval routing before publish | source: Support ticket | signal: Workflow gap | freq: H | spend: $3000/mo | decision: Build
+- External A/B testing tools (Optimizely, internal experimentation platforms) for offer variant tests | source: API pattern | signal: Capability gap | freq: M | spend: $3000/mo | decision: Build
+- Grammarly or Hemingway used to refine AI-generated offer copy before publish | source: User interview | signal: Trust gap | freq: M | spend: $0/mo | decision: Partner
+- Google Docs and Confluence parallel template libraries maintained alongside the Offer Catalog | source: Support ticket | signal: Workflow gap | freq: M | spend: $2000/mo | decision: TBD
+
+## Pattern Assessment
+- Workarounds found: 6
+- Build candidates: 4
+- Partner candidates: 1
+- Ignore decisions: 0
+- Adjacent spend: $18000/mo
+- Dominant signal: Capability gap
+
+## Action Plan
+
+### Build
+1. New product line low-confidence UX — highest frequency, highest strategic relevance, closes Samsung-path risk. Generate drafts explicitly labelled as thin-signal starting points rather than blocking. Captures correction signal from day one on every new product launch. Ship first — this is a UX change, not a new feature.
+
+2. Analytics dashboard — FY27 theme already planned. $8,000/mo in manual Excel overhead confirms urgency. Every tracker built outside the platform is a compounding loop miss and an OGS signal silo.
+
+3. Approval workflow — closes the unapproved publish risk (Air Canada-path) and eliminates $3,000/mo in Slack/email coordination overhead. User value case: marketers publish faster when approval is native; governance case: audit trail exists without manual process.
+
+4. A/B Experimentation — FY27 theme confirmed by shadow usage. $3–5K/mo in external tool spend is recoverable. Every variant test run outside the platform is conversion signal that does not feed the recommendation layer.
+
+### Partner
+1. Grammarly — Integration entry point: inline suggestion panel within the AI Copilot draft authoring view, surfaced after AI draft generation and before marketer review. Data flow: offer copy (no PII) sent to Grammarly API · readability and tone suggestions returned inline · marketer accepts or dismisses · accepted changes logged as correction signal. Ownership: Offer Service engineering (1 sprint). Covered under existing Salesforce enterprise agreement — no additional procurement required. Re-evaluate if Grammarly override rate drops below 15% (signal that copy quality has improved sufficiently to make integration redundant).
+
+2. Change management — not build:
+Google Docs/Confluence parallel template libraries — This is an adoption problem, not a feature gap. Building more features will not move teams who do not trust the Offer Catalog as the single source of truth. Fix: catalog content audit to ensure all approved templates exist natively · onboarding sessions for sub-teams currently maintaining parallel libraries · designate a catalog steward per marketing sub-team. Re-evaluate as Build if catalog utilisation remains below 60% after 2 quarters of change management investment.
+
+
+### Ignore + Monitor
+Ignore + monitor: None. All six workarounds carry strategic relevance. Re-evaluate quarterly with specific trigger: if any workaround's frequency drops to L after roadmap investment, assess whether it has been closed or merely moved to a different external tool.
+
+## Roadmap Brief
+Based on your audit: 6 user-side workarounds discovered.
+Decisions: 4 build · 1 partner · 0 ignore · 1 TBD.
+Estimated adjacent spend: $18000/mo across surveyed users.
+Dominant signal: Capability gap.
+
+Recommended next step: Capability gaps dominate — users want something your product does not do. Strongest near-term move is building one or two of these natively before a competitor does.
+
+Sequence the Build column by frequency × strategic relevance. Confirm Partner candidates with the external tools' partnership teams. Re-run this audit each quarter — workarounds shift fast.
+
+-----
+
