@@ -75,6 +75,24 @@ Heavy inference, multi-step orchestration, power-user territory. Complex agentic
 
 -----
 
+## Cascading Strategy
+<!-- Cheap model → frontier model routing logic -->
+
+**Triage model:**
+-> GPT-4o-mini / Claude Haiku — handles all simple classification, field validation, disclosure rendering, and template population. Fast, cheap, high-volume.
+
+**Frontier model:**
+-> GPT-4.1 — reserved exclusively for enterprise offer draft generation and complex personalization where output quality directly impacts conversion rates.
+
+**Routing rule:**
+-> Route by task complexity classification at the abstraction layer. If task type is validation, scoring, or templating → small model. If task type is offer generation for enterprise segment or progressive profiling → frontier. No exceptions without an explicit
+
+**Expected cascade ratio:**
+-> 80% small/mid · 20% frontier
+
+-----
+
+
 
 
 
