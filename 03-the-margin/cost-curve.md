@@ -124,7 +124,7 @@ Why this pricing structure fits the buyer and the value delivered: — The prici
 - Revenue: $50/seat base + $25/offer × 200 offers/month = $8,000/month
 - COGS: $3,500/month (variable)
 - Gross Margin: 56%
-- 
+  
 **Net margin shift:**
 - Δ margin %: −4%
 - Δ gross $: +$1,800/month (+67%)
