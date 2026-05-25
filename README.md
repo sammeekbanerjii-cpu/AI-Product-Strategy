@@ -25,13 +25,13 @@
 
 **What we're building, for whom, why now.**
 
-- **Product:** Offer Service
-- **AI Value Archetype:** Copilot
-- **Vulnerability Scores:** _(add: Moat _/5 · Data _/5 · Platform _/5)_
-- **Top Risk:** -> The data advantage is latent, not active — if Offer Service doesn't close the loop between OGS behavioral signals and intelligent offer decisioning before Agentforce matures, it risks being absorbed into the AI platform layer rather than expanded as a standalone product.
-- **Confidence:** M
+- **Product:** Offer Service — Salesforce's internal digital marketing platform. Three pillars: Offer Catalog (centralized authoring across all Salesforce web properties) · OFX (offer experience rendering layer) · OGS (offer generation signal — behavioral data routed into Data Cloud).
+- **AI Value Archetype:**  Copilot — AI surfaces recommendations and drafts at the point of authoring. Marketer reviews and publishes. Human in the loop on every output until trust is established and HITL% declines to target.
+- **Vulnerability Scores:** Contextual Moat 2/5 · Data Advantage 3/5 · Platform Exposure 2/5. Workflow depth is real but not yet fully habituated — a determined team could migrate in a quarter if Offer Catalog hasn't achieved write-once-reuse-everywhere adoption. Data advantage is real but latent — OGS feeds Data Cloud, the return path to intelligent decisioning does not yet exist. Platform Exposure risk is internal, not external — Agentforce and Marketing Cloud consolidation are the live vectors.
+- **Top Risk:** -> The data advantage is latent, not active — if Offer Intelligence doesn't close the loop between OGS behavioral signals and intelligent offer decisioning before Agentforce matures, it risks being absorbed into the AI platform layer rather than expanded as a standalone product.
+- **Confidence:** M — workflow moat and Data Cloud integration are real today. Data moat is a bet, not a fact. Confidence upgrades to H when correction loop is live and HITL% is declining QoQ.
 - **Prototype:** https://preview--offer-muse-56.lovable.app/
-- **Kill Criteria:** -> Marketers default to authoring offers manually and ignore AI recommendations after 60 days of availability -> AI-generated drafts show no statistically significant lift in conversion score versus manually authored offers after two campaign cycles -> Data Cloud signal quality p…
+- **Kill Criteria:** -> Marketers default to manual authoring and ignore AI recommendations after 60 days of availability · AI-generated drafts show no statistically significant conversion lift vs. manually authored offers after two campaign cycles · HITL% rises for two consecutive quarters — correction loop is not compounding · Agentforce ships native offer orchestration with Data Cloud integration before Offer Intelligence closes the data loop · Data Cloud signal quality degrades and conversion scoring accuracy falls below 88% on the golden dataset for two consecutive months.
 
 → Details: [`01-the-bet/`](01-the-bet/)
 
