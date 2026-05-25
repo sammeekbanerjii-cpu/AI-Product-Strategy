@@ -41,11 +41,11 @@
 
 **Why this won't get copied in 6 months.**
 
-- **Data Flywheel Score:**
-- **Weakest Loop:**
-- **Top Encroachment Threat:**
-- **Encroachment Defense:**
-- **Vendor Portability:** Locked
+- **Data Flywheel Score:**  6/20 — Correction 1/5 · Preference 2/5 · Domain Context 2/5 · Network 1/5. Not compounding.
+- **Weakest Loop:** Correction (1/5) — no correction capture pipeline exists. Marketer edits to AI-generated drafts are discarded. Every override is a signal miss.
+- **Top Encroachment Threat:** Mutiny — ships a native Data Cloud connector in 6–9 months. If correction capture is not live before that, Mutiny starts the compounding loop on Salesforce's own proprietary signal. The workflow moat does not protect against a competitor that compounds faster.
+- **Encroachment Defense:** Close the correction loop before Mutiny ships. Instrument field-level delta logging between AI output and final published offer in the AI Copilot authoring workflow — tagged by segment, offer type, and product line — routed into the model layer. Mutiny can replicate the connector. It cannot replicate 18 months of B2B offer performance signal plus a correction loop that has been compounding since launch. The defense is sequencing: correction capture ships in H1 so the data moat is building before the competitive window closes.
+- **Vendor Portability:** Locked - single OpenAI provider, direct API calls, no abstraction layer, no eval harness. Current estimated swap time: 3–6 weeks vs. 48-hour target. Three actions to reach 48-hour readiness: abstraction wrapper this week · eval harness this month · multi-model routing with live fallback this quarter.
 
 → Details: [`02-the-moat/`](02-the-moat/)
 
