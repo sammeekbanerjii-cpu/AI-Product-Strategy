@@ -1,3 +1,23 @@
+## Packing Decision
+
+**Leader:**
+ ->  AI Offer Draft Generation + Conversion Scoring
+The feature marketers open Offer Intelligence for. Generates conversion-optimized offer briefs with predicted performance scores on every offer creation event. High adoption potential, used in every core workflow. Bundle into platform once adoption exceeds 70% of active marketers.
+
+**Filler:**
+-> Form Templates, Disclosure Summaries, CTA Suggestions
+Low inference cost, broad utility across all user segments. Reduces authoring time and increases session depth without materially impacting COGS. Bundle into the base platform — drives engagement and makes the Leader stickier.
+
+**Killer:**
+-> Autonomous Offer Sequencing + Agent Workflows + Predictive Progressive Profiling
+Heavy inference, multi-step orchestration, power-user territory. Complex agentic tasks that run significant token volumes regardless of output quality requirements. If bundled for all users, destroys the margin model — most users won't use them but the cost runs for everyone.
+
+**Killer Usage%:**
+-> <20% of active marketers (estimated at Beta stage — validate against usage data before committing)
+
+**Bundler or Add-On:**
+-> Add-on. Gate behind a premium tier for high-frequency campaign teams. Protects core platform margin while capturing value from the segment that needs autonomous orchestration.
+
 # Cost Curve & Pricing Strategy
 
 ## Cost Model
