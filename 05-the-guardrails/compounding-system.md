@@ -23,11 +23,11 @@ Activation criteria: Loop is Active when a pattern learned in Offer Type A demon
 **How knowledge flows:** OGS captures offer interaction data — form submissions, click events, progressive profile enrichment, PLG trial conversions — and routes it into Data Cloud. That is the complete flow. One direction, one destination. Marketing teams publish offers, OGS collects the signal, Data Cloud stores it.
 
 **Where it silos:** 
-Silo 1 — Between Data Cloud and the AI Copilot.
+- Silo 1 — Between Data Cloud and the AI Copilot.
 Signal accumulates in Data Cloud but does not flow back into Offer Intelligence's recommendation layer. The data exists. The return path does not. This is the Cross-Domain Transfer broken loop — existing infrastructure, no bridge.
-Silo 2 — Across marketing teams.
+- Silo 2 — Across marketing teams.
 Each team's offer performance signal is isolated. The campaign team's learnings about enterprise CRO conversion patterns do not improve recommendations for field marketing running similar offers. Teams are contributing signal to a shared platform that gives nothing back to the collective. Knowledge compounds within Data Cloud but never transfers across the organisation.
-Silo 3 — Between offer types.
+- Silo 3 — Between offer types.
 SMB trial offer learnings do not inform SMB webinar recommendations. Gated content conversion patterns do not transfer to PLG trial offer sequencing. Each offer category learns in isolation despite sharing the same audience segments and the same underlying intent signals.
 
 -----
