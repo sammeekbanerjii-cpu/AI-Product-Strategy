@@ -5,10 +5,13 @@
 ### Horizon 1 — Now (0-3 months)
 *Quick wins. Ship with existing capabilities.*
 
+
+
+
 | Initiative | Metric | Confidence |
 |-----------|--------|-----------|
-| | | H / M / L |
-| | | H / M / L |
+|Correction capture pipeline — instrument field-level delta logging between AI output and final published offer, tagged by segment, offer type, and product line, routed into model layer | Correction signal flowing into model layer by end of sprint 2 · HITL% baseline established | H / M / L |
+| | | M  |
 
 ### Horizon 2 — Next (3-9 months)
 *Bets. Requires new capabilities or integrations.*
